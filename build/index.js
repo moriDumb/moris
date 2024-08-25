@@ -1,35 +1,16 @@
-const konh1  = document.getElementById("konh1")
-const konh1p  = document.getElementById("konh1p")
-const hider = document.querySelector("aaa")
+const konhp = document.getElementById("konhp1")
+const konh = document.getElementById("konhp")
+const konten1 = document.getElementById("konten1")
 
-konh1.innerHTML = "VIOLET EVERGARDEN"
-konh1p.innerHTML = "—Violet's greeting to her clients.";
+konh.addEventListener("mouseenter", (event) => {
+   const kop = konhp.style.display = "block";
+   const kont = konten1.style.filter = "blur(0px)"
 
-konh1.addEventListener(
-    "mouseenter",
-    (event) =>{
-        konh1.style.color = "pink"
+    setTimeout(() =>{
+        konhp.style.animationPlayState ="paused"
 
-        setTimeout(() =>{
-            konh1.style.color = "wheat"
-        },8000)
-    }
-)
-
-konh1p.addEventListener(
-    "mouseenter",
-    (event) =>{
-        konh1p.innerHTML = "It is a pleasure to meet you. If it is your wish, I will travel anywhere to meet your request. Auto Memory Doll, Violet Evergarden, at your service."
-       konh1p.style.color = "pink"
-        setTimeout(() =>{
-            konh1p.innerHTML = "—Violet's greeting to her clients."
-        },10000)
-    }
-)
+    },3000);
 
 
-
-
-
-
-
+    
+});

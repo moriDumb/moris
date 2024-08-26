@@ -13,7 +13,7 @@ html, body {
 
 }
 body {
-    background-color: rgba(54, 51, 51, 0.986);
+    background-color: rgba(255, 192, 203, 0.26);
 }
 .container{
 
@@ -46,9 +46,8 @@ body {
     grid-area: conten;
     grid-template-areas: 
     "konten konten konten"
-    "conten1 conten2 conten3"
-    "conten1 conten2 conten3"
-    "conten1 conten2 conten3";
+    "conten2 conten2 conten2"
+;
     gap: 20px;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto;
@@ -89,50 +88,61 @@ body {
 
 
 }
-.as {
 
-}
+
 .content2{
-    height: 200px;
- padding: 0px;
-    display: grid;
-    background-color: pink;
+    border: 2px solid pink;
     grid-area: conten2;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    column-gap: 20px;
-    max-width: 100%;
-    max-height: 100%;
-   overflow: hidden;
- position: relative;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
 
+
+}
+
+.content .list {
+    width: 100%;
+    display: flex;
+    min-width:calc(var(--width)* var(--quantity));
+    position: relative;
 }
 
 
 
-.content2 .item {
-    
-    width: 200px;
-    height: 200px;
+.content2 .list .item {
+    width: var(--width);
+    height: var(--height);
     transition: filter 0.5s;
-    animation: violl 10s linear infinite;
-    animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1));
-    transform: translate(620px, 0%);
     position: absolute;
+    left: 100%;
+    animation: violl 10s linear infinite;
+    animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1) );
 
 
+}
+.as{
+    border: 2px solid;
+}
+.content2.list.item img {
+    width: 100%;
 }
 
 @keyframes violl {
     from {
-        transform: translate(620px);
-
+       left: 100%;
     }
     to {
-    transform: translate(-1000px);
-        
+        left: calc(var(--width)* -1);
 
     }
 }
+
+
 
 .content2:hover .item {
     animation-play-state: paused!important;
@@ -199,35 +209,32 @@ ul>li :hover {
     color: white;
 }
 .konmm2{
+
     color: white;
  backdrop-filter: blur(10px);
     height: 40px;
     width: 50px;
     display: none;
     border-radius: 5px;
-    animation: kabnjt 3s ease 2 alternate forwards running;
     overflow: hidden;
    position: absolute;
-   font-size: 0px;
-}
-
-@keyframes kabnjt {
-
- 50%{
-    height: 40px;
-    font-size: 0px;
-}
-
-100%{
-    height: 40px;
-
-    font-size: 16px;
-    width: 500px;
-}
-
+   font-size: 20px;
+   animation: typing 1s steps(50,end) forwards,blinking 1s infinite;
 
 
 }
+
+@keyframes typing {
+    from {
+        height: 40px;
+        font-size: 16px;
+        width: 30px;
+     }
+    to { 
+        font-size: 16px;
+        width: 500px }
+}
+
 
 
 

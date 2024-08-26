@@ -144,11 +144,15 @@ body {
 .content2:hover .item {
     animation-play-state: paused!important;
     filter: grayscale(1);
+    filter: blur(3px);
+    
 }
 
 .content2 .item:hover {
-    
     filter: grayscale(0);
+    filter: blur(0px);
+
+
 }
 
 

@@ -15,6 +15,9 @@ body {
     background-color: rgba(255, 192, 203, 0.26);
 }
 
+
+
+
 @media only screen and (min-width: 1000px) {
 
     .container{
@@ -258,8 +261,7 @@ body {
     }
     
 }
-
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) and (max-width : 1000px) {
 
     .container{
 
@@ -318,7 +320,6 @@ body {
         border-radius: 20px;
         background-size: cover;
         transition: filter 0.5s;
-
         padding: 250px;
         margin: 0px;
         margin-bottom: 50px;
@@ -415,7 +416,7 @@ body {
     }
     
     .konmm {
-        color:white;
+        color:rgb(77, 66, 66);
     }
     ul>li {
         filter: blur(0.5px);
@@ -436,7 +437,6 @@ body {
 
   
     .konmm2{
-    
         color: rgb(0, 0, 0);
      backdrop-filter: blur(10px);
         height: 40px;
@@ -449,16 +449,20 @@ body {
        animation: typing 1s steps(50,end) forwards,blinking 1s infinite;
        left: 5%;
     
-    
+       text-align: start;
     }
     
     @keyframes typing {
         from {
+
+
             height: 40px;
             font-size: 16px;
             width: 30px;
          }
         to { 
+
+
             font-size: 16px;
             width: 400px }
     }
@@ -467,9 +471,11 @@ body {
     
     
     .konmm {
-        transform: translate(-220px);
-        
-
+        color: white;
+        transform: translate(-200px);
+        text-align: start;
+        position: absolute;
+        top: 40%;
         animation: glow 2s ease-in-out infinite alternate;
     }
     
@@ -487,15 +493,16 @@ body {
     }
 
     .konmm1{
-        transform: translate(-226px);
+        color: rgb(255, 255, 255);
+        transform: translate(-200px);
       text-wrap: nowrap;
       padding-bottom: 5px;
     }
     
 }
 
-@media only screen and ( max-width: 1000px) {
 
+@media only screen and (max-width: 600px) and (min-width: 300px) {
     .container{
 
         display: grid;
@@ -703,8 +710,8 @@ body {
     
     .konmm {
         transform: translate(-220px);
-        
-
+        position: absolute;
+        top: 40%;
         animation: glow 2s ease-in-out infinite alternate;
     }
     
@@ -723,6 +730,7 @@ body {
 
     .konmm1{
         transform: translate(-226px);
+
       text-wrap: nowrap;
       padding-bottom: 5px;
     }

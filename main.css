@@ -311,7 +311,7 @@ body {
     }
     .konten1{
         filter: blur(0.7px);
-        background-image: url("/image/ayang.jpg");
+        background-image: url("image/ayang.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-position: 50% 100%;
@@ -546,7 +546,7 @@ body {
     }
     .konten1{
         filter: blur(0.7px);
-        background-image: url("/image/ayang.jpg");
+        background-image: url("image/ayang.jpg");
         background-repeat: no-repeat;
         background-position: center;
         background-position: 50% 100%;

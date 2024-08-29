@@ -19,18 +19,3 @@ konh.addEventListener("mouseenter", (event) => {
 
     
 });
-
-konhptp.addEventListener("mouseenter", (event) => {
-    const kopP = konhp1tp.style.display = "block";
-  
-     const kont = konten1.style.filter = "blur(0px)"
-  
-      setTimeout(() =>{
-        konhp1tp.style.animationPlayState ="paused"
-  
-      },3000);
-  
-  
-      
-  });
-
